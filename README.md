@@ -98,4 +98,5 @@ For a clean installation, run `npm run setup` and then `npm run dev` from the `s
 - Price Calculator → Flowers now shows the per-piece cost in the selection list and selected row. Using 25 pieces of the above example costs 25 × ₱2 = ₱50.
 - The alternative **Cost per piece** input still works: the frontend converts this to pack total on save so all calculations stay consistent. Existing saved materials continue to be supported.
 #   S C S - S t u d i o - H u b  
+ #   S C S - S t u d i o - H u b  
  
