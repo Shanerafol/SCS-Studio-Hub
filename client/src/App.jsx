@@ -713,7 +713,7 @@ function App() {
     <form className="login-card" onSubmit={loginSubmit}>
       <div className="logo-big">
         <img
-          src="/scs-logo.png"
+          src={`${import.meta.env.BASE_URL}scs-logo.png`}
           className="login-logo"
           alt="Shane Creative Studio" /> SCS StudioHub</div>
       <p>Your beautiful space to manage business.</p>
@@ -744,7 +744,7 @@ function App() {
       <div className="brand">
         <img
           className="brand-logo"
-          src="/scs-logo.png"
+         src={`${import.meta.env.BASE_URL}scs-logo.png`}
           alt="Shane Creative Studio logo" />
         <div>
           <strong>SCS
