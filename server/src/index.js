@@ -128,7 +128,15 @@ function save() {
   fs.renameSync(tmp, dataFile);
 }
 const app = express();
-app.use(cors({ origin: ['http://localhost:5173', 'http://127.0.0.1:5173'] }));
+
+app.use(cors({
+  origin: [
+    "https://shanerafol.github.io",
+    "http://localhost:5173",
+    "http://127.0.0.1:5173"
+  ]
+}));
+
 app.use(express.json({ limit: '4mb' }));
 const wrap = fn => (req, res) => {
 
@@ -811,4 +819,10 @@ app.post('/api/receipts', wrap((req, res) => {
   res.status(existing ? 200 : 201).json(receipt);
 }));
 app.get('/api/health', wrap((req, res) => res.json({ ok: true })));
-app.listen(4000, () => console.log('SCS StudioHub API ready at http://localhost:4000'));
+
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`SCS StudioHub API running on port ${PORT}`);
+});
+
