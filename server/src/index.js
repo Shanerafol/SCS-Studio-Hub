@@ -132,6 +132,7 @@ const app = express();
 app.use(cors({
   origin: [
     "https://shanerafol.github.io",
+    "https://scs-studio-hub.vercel.app/",
     "http://localhost:5173",
     "http://127.0.0.1:5173"
   ]
